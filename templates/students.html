@@ -1,0 +1,14 @@
+<!-- Saad_app/templates/Saad_app/students.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Students</h1>
+  <ul>
+    {% for student in students %}
+      <li><a href="{% url 'details' student.id %}">{{ student.name }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <!-- Form for adding a new student would go here -->
+{% endblock %}
